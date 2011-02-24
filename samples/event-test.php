@@ -7,11 +7,11 @@ require 'classes/sag/sag.php';
 // Grab the raw JSON sent from Tropo.
 $json = file_get_contents("php://input");
 
-// Create a new Session object and obtain the session ID value.
-$session = new Session($json);
+// Create a new TropoSession object and obtain the session ID value.
+$session = new TropoSession($json);
 $session_id = $session->getId();
 
-// Insert the Session object into a CouchDB database called sessions.
+// Insert the TropoSession object into a CouchDB database called sessions.
 try {
 	$sag = new Sag();
 	$sag->setDatabase("sessions");

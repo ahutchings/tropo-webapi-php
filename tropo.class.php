@@ -1301,7 +1301,7 @@ class Say extends BaseClass {
  * TODO: Need to break out headers into a more accessible data structure.
  * @package TropoPHP
  */
-class Session {
+class TropoSession {
 	
 	private $_id;
 	private $_accountID;

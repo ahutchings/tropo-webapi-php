@@ -60,8 +60,8 @@ function formatWeatherResponse(&$tropo, $zip) {
 dispatch_post('/start', 'zip_start');
 function zip_start() {
 	
-	// Create a new instance of the Session object, and get the channel information.
-	$session = new Session();
+	// Create a new instance of the TropoSession object, and get the channel information.
+	$session = new TropoSession();
 	$from_info = $session->getFrom();
 	$channel = $from_info['channel'];
 	

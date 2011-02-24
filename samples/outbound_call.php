@@ -13,10 +13,10 @@ $number = 'the number you would like to dial';
 include_once 'tropo.class.php';
 $tropo = new Tropo();
 
-// When the the session object is created, it tries
+// When the the TropoSession object is created, it tries
 // to load the json that Tropo posts when reciving or
 // making a call. If the json doesn't exist, the 
-// Session object throws a TropoException.
+// TropoSession object throws a TropoException.
 // This try/catch block checks to see if this code is
 // being run as part of a session or being run directly.
 try {
@@ -24,7 +24,7 @@ try {
   // this next line throws an exception if the code isn't
   // being run by Tropo. If that happens, the catch block
   // below will run.
-  $session = new Session();
+  $session = new TropoSession();
   
   if ($session->getParameters("action") == "create") {  
     // A token-launched session (an outgoing call) will
@@ -45,7 +45,7 @@ try {
 } catch (TropoException $e) {
   if ($e->getCode() == '1') {
     
-    // The session object threw an exception, so this file wasn't
+    // The TropoSession object threw an exception, so this file wasn't
     // loaded as part of a Tropo session. Use the session API to 
     // launch a new session.
     if ($tropo->createSession($token, array('dial' => $number))) {
