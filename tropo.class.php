@@ -1615,10 +1615,10 @@ class Endpoint extends BaseClass {
 class TropoException extends Exception { }
 
 /**
- * Date Helper class.
+ * TropoDate Helper class.
  * @package TropoPHP_Support
  */
-class Date {
+class TropoDate {
 	public static $monthDayYear = "mdy";
 	public static $dayMonthYear = "dmy";
 	public static $yearMonthDay = "ymd";
