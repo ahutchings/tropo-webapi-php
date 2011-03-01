@@ -1658,10 +1658,10 @@ class Event {
 }
 
 /**
- * Format Helper class.
+ * TropoFormat Helper class.
  * @package TropoPHP_Support
  */
-class Format {
+class TropoFormat {
 	public $date;
 	public $duration;
 	public static $ordinal = "ordinal";
